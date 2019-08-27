@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Script/Bandeira.gd" type="Script" id=1]
+[ext_resource path="res://Assets/flagBlue2.png" type="Texture" id=2]
+[ext_resource path="res://Assets/flagBlue.png" type="Texture" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "voando",
+"speed": 5.0
+} ]
+
+[node name="Bandeira" type="Area2D"]
+editor/display_folded = true
+position = Vector2( 848.494, 330.7 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 2 )
+animation = "voando"
+speed_scale = 0.8
+playing = true
+[connection signal="body_entered" from="." to="." method="_on_Bandeira_body_entered"]

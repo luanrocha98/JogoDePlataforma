@@ -1,0 +1,53 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Pacotes/jogador.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Pacotes/moeda.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Pacotes/gramas.tres" type="TileSet" id=3]
+[ext_resource path="res://Pacotes/Bandeira.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Pacotes/areaDeMorte.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Assets/spikes.png" type="Texture" id=6]
+[ext_resource path="res://Pacotes/indicadorDeFase.tscn" type="PackedScene" id=7]
+
+[node name="Fase2" type="Node2D"]
+
+[node name="jogador" parent="." instance=ExtResource( 1 )]
+position = Vector2( 158.512, 443.391 )
+
+[node name="moeda" parent="." instance=ExtResource( 2 )]
+position = Vector2( 268.443, 421.753 )
+
+[node name="moeda2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 554.121, 451.681 )
+
+[node name="moeda3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 448.012, 115.669 )
+
+[node name="moeda4" parent="." instance=ExtResource( 2 )]
+position = Vector2( 926.864, 212.256 )
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 70, 70 )
+format = 1
+tile_data = PoolIntArray( -65521, 3, 0, 15, 3, 0, 65551, 3, 0, 131072, 1, 0, 131073, 1, 0, 131074, 1, 0, 131087, 3, 0, 196608, 3, 0, 196609, 3, 0, 196610, 3, 0, 196611, 1, 0, 196612, 1, 0, 196614, 5, 0, 196616, 5, 0, 196618, 0, 0, 196619, 2, 0, 196623, 3, 0, 262144, 3, 0, 262145, 3, 0, 262156, 6, 0, 262159, 3, 0, 327680, 3, 0, 327694, 1, 0, 327695, 3, 0, 393216, 3, 0, 393229, 1, 0, 393230, 3, 0, 393231, 3, 0, 458752, 3, 0, 458753, 1, 0, 458754, 1, 0, 458755, 1, 0, 458756, 1, 0, 458757, 1, 0, 458762, 1, 0, 458763, 1, 0, 458764, 1, 0, 458765, 3, 0, 458766, 3, 0, 458767, 3, 0, 524288, 3, 0, 524289, 3, 0, 524290, 3, 0, 524291, 3, 0, 524292, 3, 0, 524293, 3, 0, 524294, 1, 0, 524297, 1, 0, 524298, 3, 0, 524299, 3, 0, 524300, 3, 0, 524301, 3, 0, 524302, 3, 0, 524303, 3, 0, 589824, 3, 0, 589825, 3, 0, 589826, 3, 0, 589827, 3, 0, 589828, 3, 0, 589829, 3, 0, 589830, 3, 0, 589831, 3, 0, 589832, 3, 0, 589833, 3, 0, 589834, 3, 0, 589835, 3, 0, 589836, 3, 0, 589837, 3, 0, 589838, 3, 0, 589839, 3, 0 )
+
+[node name="Bandeira" parent="." instance=ExtResource( 4 )]
+editor/display_folded = false
+position = Vector2( 126.067, 104.538 )
+proximaFase = "res://Cenas/Fase3.tscn"
+
+[node name="areaDeMorte" parent="." instance=ExtResource( 5 )]
+editor/display_folded = false
+position = Vector2( 575.445, 680.797 )
+
+[node name="Sprite" type="Sprite" parent="areaDeMorte"]
+position = Vector2( -51, -115 )
+texture = ExtResource( 6 )
+
+[node name="Sprite" type="Sprite" parent="areaDeMorte/Sprite"]
+position = Vector2( 70.6509, 0 )
+texture = ExtResource( 6 )
+
+[node name="Label" parent="." instance=ExtResource( 7 )]
+margin_right = 54.0
+text = "VIDAS : 1"

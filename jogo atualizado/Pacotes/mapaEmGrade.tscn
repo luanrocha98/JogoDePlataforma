@@ -1,0 +1,146 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Assets/grassLeft.png" type="Texture" id=1]
+[ext_resource path="res://Assets/grassMid.png" type="Texture" id=2]
+[ext_resource path="res://Assets/grassRight.png" type="Texture" id=3]
+[ext_resource path="res://Assets/grassCenter.png" type="Texture" id=4]
+[ext_resource path="res://Assets/grassCenter_rounded.png" type="Texture" id=5]
+[ext_resource path="res://Assets/grass.png" type="Texture" id=6]
+[ext_resource path="res://Assets/grassHalfRight.png" type="Texture" id=7]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 15.9799, 15.9751 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 9.10485, 16.066 )
+
+[node name="Chão em grade" type="Node2D"]
+
+[node name="0" type="Sprite" parent="."]
+editor/display_folded = true
+scale = Vector2( 0.45678, 0.45678 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 70, 70 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="0"]
+scale = Vector2( 2.18924, 2.18924 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="0/StaticBody2D"]
+position = Vector2( 16, 16 )
+shape = SubResource( 1 )
+
+[node name="1" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 32, 0 )
+scale = Vector2( 0.45678, 0.45678 )
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 70, 70 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="1"]
+scale = Vector2( 2.18924, 2.18924 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="1/StaticBody2D"]
+position = Vector2( 16, 16 )
+shape = SubResource( 1 )
+
+[node name="2" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 64, 0 )
+scale = Vector2( 0.45678, 0.45678 )
+texture = ExtResource( 3 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 70, 70 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="2"]
+scale = Vector2( 2.18924, 2.18924 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="2/StaticBody2D"]
+position = Vector2( 16, 16 )
+shape = SubResource( 1 )
+
+[node name="3" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 96, 0 )
+scale = Vector2( 0.45678, 0.45678 )
+texture = ExtResource( 4 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 70, 70 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="3"]
+scale = Vector2( 2.18924, 2.18924 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="3/StaticBody2D"]
+position = Vector2( 16, 16 )
+shape = SubResource( 1 )
+
+[node name="4" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 128, 0 )
+scale = Vector2( 0.45678, 0.45678 )
+texture = ExtResource( 5 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 70, 70 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="4"]
+scale = Vector2( 2.18924, 2.18924 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="4/StaticBody2D"]
+position = Vector2( 16, 16 )
+shape = SubResource( 1 )
+
+[node name="5" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 160, 0 )
+scale = Vector2( 0.45678, 0.45678 )
+texture = ExtResource( 6 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 70, 70 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="5"]
+scale = Vector2( 2.18924, 2.18924 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="5/StaticBody2D"]
+position = Vector2( 16, 16 )
+shape = SubResource( 1 )
+
+[node name="6" type="Sprite" parent="."]
+position = Vector2( 192, 0 )
+scale = Vector2( 0.45678, 0.45678 )
+texture = ExtResource( 7 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 70, 70 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="6"]
+scale = Vector2( 2.18924, 2.18924 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="6/StaticBody2D"]
+position = Vector2( 16.004, 9.0535 )
+rotation = 1.5708
+shape = SubResource( 2 )

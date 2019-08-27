@@ -1,0 +1,63 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Pacotes/jogador.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Pacotes/Bandeira.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Pacotes/moeda.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Pacotes/gramas.tres" type="TileSet" id=4]
+[ext_resource path="res://Pacotes/areaDeMorte.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Assets/spikes.png" type="Texture" id=6]
+[ext_resource path="res://Pacotes/indicadorDeFase.tscn" type="PackedScene" id=7]
+
+[node name="Fase3" type="Node2D"]
+
+[node name="jogador" parent="." instance=ExtResource( 1 )]
+position = Vector2( 132.538, 482.291 )
+
+[node name="Bandeira" parent="." instance=ExtResource( 2 )]
+editor/display_folded = false
+position = Vector2( 889.397, 78.4965 )
+proximaFase = "res://Cenas/Parabéns.tscn"
+
+[node name="moeda" parent="." instance=ExtResource( 3 )]
+position = Vector2( 364.472, 456.579 )
+
+[node name="moeda5" parent="." instance=ExtResource( 3 )]
+position = Vector2( 911.343, 285.172 )
+
+[node name="moeda4" parent="." instance=ExtResource( 3 )]
+position = Vector2( 409.365, 249.802 )
+
+[node name="moeda2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 594.709, 453.512 )
+
+[node name="moeda6" parent="." instance=ExtResource( 3 )]
+position = Vector2( 625.998, 242.654 )
+
+[node name="moeda3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 107.007, 113.952 )
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2( 520.562, 179.25 )
+tile_set = ExtResource( 4 )
+cell_size = Vector2( 70, 70 )
+format = 1
+tile_data = PoolIntArray( -196601, 3, 0, -65544, 1, 0, -131065, 3, 0, -8, 3, 0, -4, 1, 0, -2, 0, 0, -1, 2, 0, -65535, 0, 0, -65534, 2, 0, -65532, 0, 0, -65531, 2, 0, -65529, 3, 0, 65528, 3, 0, 65531, 6, 0, 7, 3, 0, 131064, 3, 0, 131065, 1, 0, 65543, 3, 0, 196600, 3, 0, 196601, 3, 0, 196602, 1, 0, 196603, 1, 0, 196604, 1, 0, 196605, 2, 0, 196607, 0, 0, 131072, 2, 0, 131074, 0, 0, 131075, 1, 0, 131079, 3, 0, 262136, 3, 0, 196612, 6, 0, 196615, 3, 0, 327672, 3, 0, 262150, 1, 0, 262151, 3, 0, 393208, 1, 0, 393209, 1, 0, 393210, 1, 0, 393211, 2, 0, 393213, 0, 0, 393214, 2, 0, 327680, 0, 0, 327681, 2, 0, 327683, 0, 0, 327684, 1, 0, 327685, 1, 0, 327686, 3, 0, 327687, 3, 0, 458744, 3, 0, 458745, 3, 0, 458746, 3, 0, 458747, 3, 0, 458748, 3, 0, 458749, 3, 0, 458750, 3, 0, 458751, 3, 0, 393216, 3, 0, 393217, 3, 0, 393218, 3, 0, 393219, 3, 0, 393220, 3, 0, 393221, 3, 0, 393222, 3, 0, 393223, 3, 0 )
+
+[node name="areaDeMorte" parent="." instance=ExtResource( 5 )]
+editor/display_folded = false
+position = Vector2( 520.952, 648.469 )
+
+[node name="Sprite" type="Sprite" parent="areaDeMorte"]
+position = Vector2( -242.147, -84.3433 )
+texture = ExtResource( 6 )
+
+[node name="Sprite2" type="Sprite" parent="areaDeMorte"]
+position = Vector2( -35.3698, -84.3433 )
+texture = ExtResource( 6 )
+
+[node name="Sprite3" type="Sprite" parent="areaDeMorte"]
+position = Vector2( 172.768, -85.7037 )
+texture = ExtResource( 6 )
+
+[node name="Label" parent="." instance=ExtResource( 7 )]
+text = "VIDAS : 1"
